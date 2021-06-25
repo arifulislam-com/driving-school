@@ -1,0 +1,15 @@
+.MainHome{
+    height: 600px;
+    width: 100%;
+    background-image: url("../../../images/home-page-background.jpg");
+    background-repeat: no-repeat;
+    position: relative;
+    background-size: cover;
+}
+.heading{
+    font-size: 80px;
+    color: yellow;
+}
+.m-2{
+    padding: 100px;
+}

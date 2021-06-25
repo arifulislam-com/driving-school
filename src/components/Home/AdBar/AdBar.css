@@ -1,0 +1,28 @@
+.Adbar{
+    background-color: #353638;
+    text-align: center;
+}
+.Adbar h3{
+    color: white;
+    font-size: 33px;
+    padding: 0;
+    margin: 0;
+}
+.Adbar p{
+    color: white;
+    font-size: 20px;
+    padding: 0;
+    margin: 0;
+}
+.Adbar h2{
+    color: white;
+    font-size: 30px;
+    padding: 0;
+    margin: 0;
+}
+.Adbar div{
+    padding: 20px;
+}
+.Adbar h3 span{
+    color: yellow;
+}

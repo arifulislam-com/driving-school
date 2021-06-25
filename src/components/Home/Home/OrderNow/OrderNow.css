@@ -1,0 +1,15 @@
+.OrderNow{
+    margin: 80px;
+}
+.OrderNow h2 {
+    font-size: 70px;
+}
+.OrderBtn{
+    width: 180px;
+    height: 45px;
+    border: none;
+    color: white;
+    background-color: #353638;
+    border-radius: 4px;
+    font-weight: bold;
+}

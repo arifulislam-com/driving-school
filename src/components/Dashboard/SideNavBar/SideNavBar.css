@@ -1,0 +1,11 @@
+.SideNavBar{
+    border-right: 1px solid lightgray;
+}
+
+.SideNavBar li{
+    font-size: 20px;
+    font-weight: bold;
+    padding: 10px 0px;
+    text-decoration: none;
+    list-style: none;
+}
