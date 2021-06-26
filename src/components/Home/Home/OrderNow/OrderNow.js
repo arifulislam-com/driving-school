@@ -5,11 +5,11 @@ import './OrderNow.css'
 const OrderNow = () => {
     return (
         <div className="OrderNow">
-            <div class="row ">
-                <div class="col-6">
+            <div className="row ">
+                <div className="col-6">
                     <img src={dircub} alt="" />
                 </div>
-                <div class="col-6">
+                <div className="col-6">
                     <h2>Are You Ready?</h2>
                     <br />
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem, modi cupiditate soluta minima eveniet voluptatibus illo ad eum reiciendis obcaecati quia sapiente architecto sunt quasi fugit iure odio sequi. Necessitatibus ipsam quae nemo esse ea sint sunt voluptatum corrupti. At, repudiandae architecto quis dolores perferendis hic quo tempora quibusdam nam, optio voluptate cumque, aspernatur voluptatibus.</p>

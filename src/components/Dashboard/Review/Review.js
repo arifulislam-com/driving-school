@@ -34,28 +34,28 @@ const Review = () => {
 
     return (
         <div>
-            <div style={{ padding: "50px" }} class="row">
-                <div class="col-sm-3">
+            <div style={{ padding: "50px" }} className="row">
+                <div className="col-sm-3">
                     <SideNavBar></SideNavBar>
                 </div>
 
-                <div class="col-sm-9">
+                <div className="col-sm-9">
                     <form onSubmit={handleSubmit}>
                         <label>
                             Name:
-                            <input type="text" name="name" placeholder="Name" onBlur={handleChange} />
+                            <input type="text" name="name" required placeholder="Name" onBlur={handleChange} />
                         </label>
                         <br />
                         <br />
                         <label>
                             Email:
-                            <input type="text" name="email" placeholder="email" onBlur={handleChange} />
+                            <input type="text" name="email" required placeholder="email" onBlur={handleChange} />
                         </label>
                         <br />
                         <br />
                         <label>
                             Description:
-                            <input type="text" name="description" placeholder="description" onBlur={handleChange} />
+                            <input type="text" name="description" required placeholder="description" onBlur={handleChange} />
                         </label>
                         <br /><br />
                         <input type="submit" value="Submit" />

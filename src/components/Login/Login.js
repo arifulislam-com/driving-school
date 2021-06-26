@@ -40,7 +40,7 @@ const Login = () => {
         });
     }
     return (
-        <div>
+        <div style={{textAlign:'center', margin:'200px'}}>
             <div className="login">
                 <h2>Login With</h2>
                 <button onClick = {()=>handleSigninMethod()}>Continue with Google</button>

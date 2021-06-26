@@ -12,12 +12,12 @@ const OrderList = () => {
     }, [])
     return (
         <div>
-            <div style={{ padding: "50px" }} class="row">
-                <div class="col-sm-3">
+            <div style={{ padding: "50px" }} className="row">
+                <div className="col-sm-3">
                     <SideNavBar></SideNavBar>
                 </div>
 
-                <div class="col-sm-9">
+                <div className="col-sm-9">
                     {
                         orderedCourse ? <h4>Order List</h4> : <h4> No Order!</h4>
                     }

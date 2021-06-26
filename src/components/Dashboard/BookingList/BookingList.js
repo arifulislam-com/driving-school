@@ -43,12 +43,12 @@ const BookingList = () => {
     }
     return (
         <div>
-            <div style={{ padding: "50px" }} class="row">
-                <div class="col-sm-3">
+            <div style={{ padding: "50px" }} className="row">
+                <div className="col-sm-3">
                     <SideNavBar></SideNavBar>
                 </div>
 
-                <div class="col-sm-9">
+                <div className="col-sm-9">
                     {
                         userBooking.length ? <h4>Booking List</h4> : <h4> No Booking!</h4>
                     }

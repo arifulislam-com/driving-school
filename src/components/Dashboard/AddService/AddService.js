@@ -40,28 +40,28 @@ const AddService = () => {
 
     return (
         <div>
-             <div style={{ padding: "50px" }} class="row">
-                <div class="col-sm-3">
+             <div style={{ padding: "50px" }} className="row">
+                <div className="col-sm-3">
                     <SideNavBar></SideNavBar>
                 </div>
 
-                <div class="col-sm-9">
+                <div className="col-sm-9">
                 <form onSubmit={handleSubmit}>
                             <label>
                                 Course Title:
-                                <input type="text" name="name" placeholder="Course Title" onBlur={handleChange} />
+                                <input type="text" name="name" required placeholder="Course Title" onBlur={handleChange} />
                             </label>
                             <br />
                             <br />
                             <label>
                                 Price:
-                                <input type="text" name="price" placeholder="Price"  onBlur={handleChange} />
+                                <input type="text" name="price" required placeholder="Price"  onBlur={handleChange} />
                             </label>
                             <br />
                             <br />
                             <label>
                                 file:
-                                <input type="file" name="file"  onChange={handleFileChange} />
+                                <input type="file" name="file" required onChange={handleFileChange} />
                             </label>
                             <br /><br />
                             <input type="submit" value="Submit" />

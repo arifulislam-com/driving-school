@@ -1,12 +1,27 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import ProcessPayment from '../../ProcessPayment/ProcessPayment';
 import SideNavBar from '../SideNavBar/SideNavBar';
 
 const Booking = () => {
-    const [bookingData, setBookingData] = useState({})
-    const [paymentInfo, setPaymentInfo] = useState({})
+    const [course, setCourse] = useState({});
+    const [bookingData, setBookingData] = useState({});
+    const [paymentInfo, setPaymentInfo] = useState({});
     const { id } = useParams();
+
+    useEffect(() => {
+        fetch(`https://rocky-mesa-37051.herokuapp.com/courseById/${id}`)
+            .then(res => res.json())
+            .then(data => {
+                const newData = data[0];
+                handlecourse(newData.name)
+            })
+    }, []);
+
+    const handlecourse = (name) => {
+        setCourse(name);
+    }
+    console.log(course);
 
     const handlePaymentinfo = (payment) => {
         setPaymentInfo(payment)
@@ -20,15 +35,15 @@ const Booking = () => {
         setBookingData(newBookingData);
     }
 
-
     const handleSubmit = (event) => {
+        console.log(course);
         event.preventDefault();
         fetch('https://rocky-mesa-37051.herokuapp.com/booking', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
             },
-            body: JSON.stringify({...bookingData, paymentInfo}),
+            body: JSON.stringify({ ...bookingData, courseName:course, paymentInfo }),
         })
             .then(response => response.json())
             .then(data => {
@@ -42,16 +57,16 @@ const Booking = () => {
     return (
         <div>
 
-            <div style={{ padding: "50px" }} class="row">
-                <div class="col-sm-3">
+            <div style={{ padding: "50px" }} className="row">
+                <div className="col-sm-3">
                     <SideNavBar></SideNavBar>
                 </div>
 
-                <div class="col-sm-9">
+                <div className="col-sm-9">
                     {
                         paymentInfo.id ?
                             <div style={{ justifyContent: "left" }}>
-                                <h1>Book</h1>
+                                <h1>Book for {course}</h1>
                                 <form onSubmit={handleSubmit}>
                                     <label>
                                         Name:

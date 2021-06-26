@@ -13,9 +13,9 @@ const Testimonials = () => {
     return (
         <div style={{textAlign:"center", margin:"90px 60px"}}>
             <h1 style={{fontSize:"60px"}} >Testimonials</h1>
-            <div class="row ">
+            <div className="row ">
                 {
-                    review.map(data => <TestimonialCard data={data}></TestimonialCard>)
+                    review.map((data, index) => <TestimonialCard key={index} data={data}></TestimonialCard>)
                 }
             </div>
         </div>
